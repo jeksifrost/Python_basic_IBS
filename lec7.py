@@ -1,5 +1,14 @@
 class Animal:
 
+    num = 0
+
+    def __init__(self) -> None: 
+        Animal.num += 1
+
+    @staticmethod
+    def count_animal():
+        return Animal.num
+
     def voice(self):
         pass
 
@@ -22,3 +31,5 @@ deer = Deer()
 hamster.voice()
 raven.voice()
 deer.voice()
+
+print(Animal.count_animal())
